@@ -1,5 +1,6 @@
 # ubuntu-mi-maquina
 
+sudo bash -c 'cat <<EOF > /etc/sssd/sssd.conf
 [sssd]
 domains = clutchsy.local
 config_file_version = 2
@@ -17,3 +18,4 @@ ldap_id_mapping = True
 use_fully_qualified_names = False
 fallback_homedir = /home/%u
 access_provider = ad
+EOF'
